@@ -1,3 +1,52 @@
 /* =============
     Navigation
 ============= */
+header {
+
+    //survival button
+    section:nth-child(2){
+
+        a:link, a:visited{
+            background-color: $sunflower;
+            height: 30px;
+            width: 30px;
+            border-radius: 100px;
+        //    display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color:$black;
+        }
+        a:hover, a:active{
+            color:$white;
+            background-color: $black;
+        }
+    }
+    nav {
+        display: none;
+        ul {
+            li {
+                border-bottom: 1px solid $sunflower;
+                a:link,
+                a:visited {
+                    font-family: 'Roboto Slab', serif;
+                    color: $white;
+                    font-size: rem-calc(20);
+                    padding: 20px 20px;
+                    //inline by default
+                    display: inline-block;
+
+                }
+
+                a:active,
+                a:hover {
+
+                }
+            }
+
+            li:last-child{
+                border: none;
+            }
+        }
+    }
+}
