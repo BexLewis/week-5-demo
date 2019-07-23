@@ -10,12 +10,24 @@ header {
             background-color: $sunflower;
             height: 30px;
             width: 30px;
+            //Width over padding bc type
             border-radius: 100px;
         //    display: inline-block;
             display: flex;
             align-items: center;
             justify-content: center;
             color:$black;
+
+            @include lg{
+                width: inherit;
+                height: inherit;
+                //Will set to what it needs to be to contain elements
+                padding: 10px 20px;
+                border-radius: 20px;
+                i{
+                    margin-right: 10px
+                }
+            }
         }
         a:hover, a:active{
             color:$white;
@@ -23,10 +35,20 @@ header {
         }
     }
     nav {
-        display: none;
+
+
         ul {
+            @include  lg{
+                display: flex;
+
+            }
             li {
                 border-bottom: 1px solid $sunflower;
+                @include lg{
+                    border-bottom: none;
+                    border-right: 1px solid $black;
+                    padding: 0 50px ;
+                }
                 a:link,
                 a:visited {
                     font-family: 'Roboto Slab', serif;
@@ -36,10 +58,17 @@ header {
                     //inline by default
                     display: inline-block;
 
+                    @include lg{
+                        color:$black;
+
+
+                    }
+
                 }
 
                 a:active,
                 a:hover {
+                    color:$sunflower;
 
                 }
             }

@@ -6,10 +6,28 @@ header {
     grid-template-columns: 20% auto;
     grid-template-areas: "burger survival" "nav nav";
 
+    position: fixed;
+    top:0;
+    //Opens up four properties top, bottom, ect
+    //Collapses to only those elements
+
+    background-color: white;
+    width: 100%;
+
+    @include lg{
+        grid-template-areas:
+        "nav survival";
+
+    }
+
 
     section:nth-child(1) {
         padding: 10px;
         grid-area: burger;
+
+        @include lg{
+            display: none;
+        }
 
         button {
             background-color: $white;
@@ -28,11 +46,22 @@ header {
         a {
             span {
                 display: none;
+
+                @include lg{
+                    display: inline-block;
+                }
             }
         }
     }
 
     nav {
+        display: none !important;
+        //Only bv we using java
+        @include lg{
+            display: block !important;
+            background-color: $white;
+        }
+
         padding: 10px;
         grid-area: nav;
         background-color: $charcoal;
