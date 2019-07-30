@@ -3,17 +3,31 @@
 ============= */
 header {
     display: grid;
-    grid-template-columns: 20% auto;
-    padding: 10px;
-
-    nav {
-        i {
-            font-size: rem-calc(30);
-            margin-top: 8px;
-        }
+    grid-template-columns: repeat(2,1fr);
+    //padding: 10px;
+    position: fixed;
+    width: 100%;
+    //cant do padding up here bc width 100%
+    background-color: white;
+    z-index:500;
+    // nav {
+    //     i {
+    //         font-size: rem-calc(30);
+    //         margin-top: 8px;
+    //     }
+    // }
+    section{
+        padding: 0 10px;
+        height: 100%;
+        //making sure that the burg dead center
+        display: flex;
+        align-items: center;
+        font-size: rem-calc(20);
     }
 
+
     aside {
+        padding: 10px;
         text-align: right;
 
         a:link,
